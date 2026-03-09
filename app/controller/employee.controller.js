@@ -85,7 +85,7 @@ class EmployeeController {
     async updateEmployee(req, res) {
         try {
             const id = req.params.id;
-            if (req.user.empRole !== 'admin' && req.user.id !== 'manager') {
+            if (req.user.empRole !== 'admin' && req.user.empRole !== 'manager') {
                 return res.status(403).json({
                     status: false,
                     message: 'Unauthorized to update employee'
