@@ -1,0 +1,319 @@
+{
+  "info": {
+    "_postman_id": "65471289-2f13-40e0-a8bf-24ad1a75c570",
+    "name": "RBAC",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20508847"
+  },
+  "item": [
+    {
+      "name": "employee create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"empName\": \"izzon\",\r\n    \"empEmail\": \"izzon@gmail.com\",\r\n    \"empPassword\": \"izzon1234\",\r\n    \"empDepartment\": \"IT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/signup",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "employee Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"empEmail\": \"izzon@gmail.com\",\r\n    \"empPassword\": \"izzon1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "employee update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"empName\": \"izzon1\",\r\n    \"empEmail\": \"izzon@gmail.com\",\r\n    \"empPassword\": \"izzon1234\",\r\n    \"empDepartment\": \"IT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/update/69aef04cbc65b213d066c5c7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "update",
+            "69aef04cbc65b213d066c5c7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"empName\": \"izzon1\",\r\n    \"empEmail\": \"izzon@gmail.com\",\r\n    \"empPassword\": \"izzon1234\",\r\n    \"empDepartment\": \"IT\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/delete/69aef04cbc65b213d066c5c7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "delete",
+            "69aef04cbc65b213d066c5c7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "product create by user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productName\": \"prodduct 2\",\r\n    \"productDescription\": \"product productDescription 2\",\r\n    \"productPrice\": 888\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/product/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all products",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productName\": \"prodduct 2\",\r\n    \"productDescription\": \"product productDescription 2\",\r\n    \"productPrice\": 888\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/product/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get product by ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productName\": \"prodduct 2\",\r\n    \"productDescription\": \"product productDescription 2\",\r\n    \"productPrice\": 888\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/product/69aef48e66baa4a9eef72d7d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product",
+            "69aef48e66baa4a9eef72d7d"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update product by products id",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productName\": \"iPhone 2\",\r\n    \"productDescription\": \"product productDescription 2\",\r\n    \"productPrice\": 888\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/product/update/69aef48e66baa4a9eef72d7d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product",
+            "update",
+            "69aef48e66baa4a9eef72d7d"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete products by id",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YWVmMDRjYmM2NWIyMTNkMDY2YzVjNyIsImVtcFJvbGUiOiJlbXBsb3llZSIsImVtcE5hbWUiOiJpenpvbiIsImVtcEVtYWlsIjoiaXp6b25AZ21haWwuY29tIiwiZW1wRGVwYXJ0bWVudCI6IklUIiwiaWF0IjoxNzczMDcyNTgxLCJleHAiOjE3NzMwNzYxODF9.Ai_nWa0QqtlmVV4zeMBgs6yYR62dP9R3E0B_WNBcTQU",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"productName\": \"iPhone 2\",\r\n    \"productDescription\": \"product productDescription 2\",\r\n    \"productPrice\": 888\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/product/delete/69aef48e66baa4a9eef72d7d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product",
+            "delete",
+            "69aef48e66baa4a9eef72d7d"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
